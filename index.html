@@ -53,16 +53,19 @@
   <p>I love you, and always will.</p>
 </div>
 
-<iframe width="300" height="170"
-src="https://drive.google.com/file/d/1gVAQfWKKKvwUEukOkEWwoDDkTcvMet9R/preview"
-frameborder="0" allowfullscreen>
-</iframe>
-
-<iframe width="300" height="170"
-src="https://drive.google.com/file/d/1OKhzzOBG9q_taB3b3GnAntt7wGLB0j2f/preview"
-frameborder="0" allowfullscreen>
-</iframe>
-
+<div style="margin: 30px 0;">
+  <iframe width="300" height="170"
+  src="https://drive.google.com/file/d/1gVAQfWKKKvwUEukOkEWwoDDkTcvMet9R/preview"
+  frameborder="0" allowfullscreen>
+  </iframe>
+</div>
+  
+<div style="margin: 30px 0;">
+  <iframe width="300" height="170"
+  src="https://drive.google.com/file/d/1OKhzzOBG9q_taB3b3GnAntt7wGLB0j2f/preview"
+  frameborder="0" allowfullscreen>
+  </iframe>
+</div>
   
 <p>Can I take you on one virtual date? 😊</p>
 
@@ -71,9 +74,12 @@ frameborder="0" allowfullscreen>
 
 <script>
 function sayYes() {
-  alert("Yay! 💖 You just made my day!");
+  document.body.innerHTML = `
+    <h1 style="color:#ff4d88;">💖 You just made my day 💖</h1>
+    <p style="font-size:20px;">I’ll plan something really special for us.</p>
+    <p>Text me when you’re free? 😊</p>
+  `;
 }
-
 function moveNo() {
   const btn = document.getElementById("noBtn");
   btn.style.position = "absolute";
