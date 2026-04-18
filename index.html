@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>For Sandeep ❤️</title>
+
   <style>
     body {
       text-align: center;
@@ -32,6 +33,15 @@
       background-color: #cccccc;
     }
   </style>
+
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init("YOUR_PUBLIC_KEY");
+    })();
+  </script>
+
 </head>
 
 <body>
@@ -43,11 +53,10 @@
   <p>I came across our photos today, and skipped a heartbeat...</p>
   <p>The past few months made me realise how much you mean to me—more than anything.</p>
   <p>I have always loved you, but your absence made me understand the depth of it.</p>
-  <p>Everyone tells me it’s time to move on, and maybe they’re right in their own way…</p>
+  <p>Everyone tells me it’s time to move on…</p>
   <p>But moving on hasn’t been easy for me, because what we had meant a lot.</p>
   <p>I’ve realized how deeply I care about you, and how much you still matter to me.</p>
-  <p>Yesterday my journey at IU ended, and a few months back my USA journey ended…</p>
-  <p>But through all of that, what stayed with me the most was you.</p>
+  <p>Through everything, what stayed with me the most was you.</p>
   <p>I know you're a strong person. Once you decide something, you stand by it.</p>
   <p>Still, I find myself hoping—quietly—that I could get one more chance.</p>
   <p>I promise, Sandeep, I would do things differently.</p>
@@ -70,13 +79,21 @@
   </iframe>
 </div>
 
-<p style="font-size:20px;">Can I take you on one virtual date? 😊</p>
+<p style="font-size:20px;">Can I take you on one virtual date, and then you decide our future? 😊</p>
 
 <button id="yesBtn" onclick="sayYes()">Yes 💚</button>
-<button id="noBtn" onmouseover="moveNo()">No 🤍</button>
+<button onclick="sayMaybe()">Not right now 🤍</button>
+<button id="noBtn" onclick="sayNo()">No</button>
 
 <script>
+function sendResponse(response) {
+  emailjs.send("YOUR_SERVICE_ID","YOUR_TEMPLATE_ID",{
+    message: "Sandeep selected: " + response
+  });
+}
+
 function sayYes() {
+  sendResponse("YES 💖");
   document.body.innerHTML = `
     <h1 style="color:#ff4d88;">💖 You just made my day 💖</h1>
     <p style="font-size:20px;">I’ll plan something really special for us.</p>
@@ -84,11 +101,22 @@ function sayYes() {
   `;
 }
 
-function moveNo() {
-  const btn = document.getElementById("noBtn");
-  btn.style.position = "absolute";
-  btn.style.top = Math.random() * window.innerHeight + "px";
-  btn.style.left = Math.random() * window.innerWidth + "px";
+function sayMaybe() {
+  sendResponse("NOT RIGHT NOW 🤍");
+  document.body.innerHTML = `
+    <h1>That’s okay 🤍</h1>
+    <p style="font-size:18px;">Take your time. I understand.</p>
+    <p>I just wanted you to know how I feel, and will always love and wait for you Sandeep :*.</p>
+  `;
+}
+
+function sayNo() {
+  sendResponse("NO 💔");
+  document.body.innerHTML = `
+    <h1>I understand 💔</h1>
+    <p style="font-size:18px;">Thank you for being honest.</p>
+    <p>I’ll always wish the best for you. I love you so much! </p>
+  `;
 }
 </script>
 
