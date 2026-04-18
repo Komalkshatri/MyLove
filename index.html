@@ -6,7 +6,7 @@
     body {
       text-align: center;
       font-family: Arial;
-      background: #ffe6f0;
+      background: linear-gradient(to bottom, #ffe6f0, #ffffff);
       padding-top: 100px;
     }
 
@@ -37,37 +37,40 @@
 <body>
 
 <h1>Hi Sandeep ❤️</h1>
+<p style="font-size:20px; color:#555;">I made this just for you…</p>
 
-<div style="max-width: 600px; margin: auto; font-size: 18px; line-height: 1.6;">
+<div style="max-width: 600px; margin: auto; font-size: 18px; line-height: 1.8; text-align: left;">
   <p>I came across our photos today, and skipped a heartbeat...</p>
-  <p>Past few months made me realise how much you mean to me, more than anything.</p>
-  <p>I have always loved you, but how much you mean to me is what your absence has taught me.</p>
-  <p>Everyday GPT, Gemini, friends tell me that it's time to move on. Instagram gives me suggestions on how to heal.</p>
-  <p>But I don't know how to tell them—and myself—I cannot.</p>
-  <p>I now understand when people say love makes you weak, but without love I feel like I am no one.</p>
-  <p>Yesterday my journey at IU ended, 2 months back my USA journey ended, but all I cared about is my journey with you.</p>
-  <p>I know you're a very strong man. Once you decide something, you don't go back.</p>
-  <p>But I want to tell you—everyday I ask the universe for one more chance.</p>
-  <p>I promise you, Sandeep, it will be different this time.</p>
-  <p>I want to spend my life with you, and be next to you as your biggest cheerleader.</p>
-  <p>I love you, and always will.</p>
+  <p>The past few months made me realise how much you mean to me—more than anything.</p>
+  <p>I have always loved you, but your absence made me understand the depth of it.</p>
+  <p>Everyone tells me it’s time to move on, and maybe they’re right in their own way…</p>
+  <p>But moving on hasn’t been easy for me, because what we had meant a lot.</p>
+  <p>I’ve realized how deeply I care about you, and how much you still matter to me.</p>
+  <p>Yesterday my journey at IU ended, and a few months back my USA journey ended…</p>
+  <p>But through all of that, what stayed with me the most was you.</p>
+  <p>I know you're a strong person. Once you decide something, you stand by it.</p>
+  <p>Still, I find myself hoping—quietly—that I could get one more chance.</p>
+  <p>I promise, Sandeep, I would do things differently.</p>
+  <p>I would choose you, and show up better.</p>
+  <p>I want to be beside you—not just in the good moments, but always.</p>
+  <p>I love you, and I probably always will.</p>
 </div>
 
 <div style="margin: 30px 0;">
-  <iframe width="300" height="170"
+  <iframe width="320" height="180"
   src="https://drive.google.com/file/d/1gVAQfWKKKvwUEukOkEWwoDDkTcvMet9R/preview"
   frameborder="0" allowfullscreen>
   </iframe>
 </div>
-  
+
 <div style="margin: 30px 0;">
-  <iframe width="300" height="170"
+  <iframe width="320" height="180"
   src="https://drive.google.com/file/d/1OKhzzOBG9q_taB3b3GnAntt7wGLB0j2f/preview"
   frameborder="0" allowfullscreen>
   </iframe>
 </div>
-  
-<p>Can I take you on one virtual date? 😊</p>
+
+<p style="font-size:20px;">Can I take you on one virtual date? 😊</p>
 
 <button id="yesBtn" onclick="sayYes()">Yes 💚</button>
 <button id="noBtn" onmouseover="moveNo()">No 🤍</button>
@@ -80,6 +83,7 @@ function sayYes() {
     <p>Text me when you’re free? 😊</p>
   `;
 }
+
 function moveNo() {
   const btn = document.getElementById("noBtn");
   btn.style.position = "absolute";
