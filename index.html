@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>For Sandeep ❤️</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial;
+      background: #ffe6f0;
+      padding-top: 100px;
+    }
+
+    h1 {
+      font-size: 40px;
+    }
+
+    button {
+      padding: 15px 25px;
+      font-size: 18px;
+      margin: 10px;
+      cursor: pointer;
+      border-radius: 10px;
+      border: none;
+    }
+
+    #yesBtn {
+      background-color: #ff4d88;
+      color: white;
+    }
+
+    #noBtn {
+      background-color: #cccccc;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>Hi Sandeep ❤️</h1>
+<p>I love you, and always will.</p>
+<p>Can I take you on one virtual date? 😊</p>
+
+<button id="yesBtn" onclick="sayYes()">Yes 💚</button>
+<button id="noBtn" onmouseover="moveNo()">No 🤍</button>
+
+<script>
+function sayYes() {
+  alert("Yay! 💖 You just made my day!");
+}
+
+function moveNo() {
+  const btn = document.getElementById("noBtn");
+  btn.style.position = "absolute";
+  btn.style.top = Math.random() * window.innerHeight + "px";
+  btn.style.left = Math.random() * window.innerWidth + "px";
+}
+</script>
+
+</body>
+</html>
